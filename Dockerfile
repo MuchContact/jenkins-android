@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -y install libstdc++6 lib32z1 lib32stdc++6 expect
 RUN wget --progress=dot:giga http://dl.google.com/android/android-sdk_r24.1.2-linux.tgz
 RUN mv android-sdk_r24.1.2-linux.tgz /opt/
 RUN cd /opt && tar xzvf ./android-sdk_r24.1.2-linux.tgz
-ENV ANDROID_HOME /opt/android-sdk-linux/
+ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 RUN echo $PATH
 RUN echo "y" | android update sdk -u --filter platform-tools,android-21
